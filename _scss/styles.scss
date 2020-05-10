@@ -1,0 +1,59 @@
+// importing base module and referring to it by its namespace
+@use 'base';
+@use '../mixins/square' as *;
+@use '../mixins/transform' as *;
+
+h1{
+    color: base.$black;
+}
+
+.box{
+    @include square(90px);
+    @include transform(rotate(45deg));
+    background-color: base.$red;
+}
+
+// extend/inheritance
+%message-shared{
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message{
+    @extend %message-shared;
+}
+
+.error{
+    @extend %message-shared;
+    border-color: base.$red;
+}
+
+.success{
+    @extend %message-shared;
+    border-color: base.$green;
+}
+
+.warning{
+    @extend %message-shared;
+    border-color: yellow;
+}
+
+
+article[role="main"] {
+    float: left;
+    width: 600px / 960px * 100%;
+    background-color: whitesmoke;
+  }
+  
+  aside[role="complementary"] {
+    float: right;
+    width: 300px / 960px * 100%;
+    background-color: yellow;
+  }

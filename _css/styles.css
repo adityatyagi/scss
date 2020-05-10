@@ -1,0 +1,51 @@
+body {
+  padding: 20px;
+  font: 100% Helvetica, sans-serif;
+  background-color: #FFF;
+}
+
+h1 {
+  color: #000;
+}
+
+.box {
+  display: block;
+  height: 90px;
+  width: 90px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #ff0000;
+}
+
+.warning, .success, .error, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.error {
+  border-color: #ff0000;
+}
+
+.success {
+  border-color: #008000;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+article[role=main] {
+  float: left;
+  width: 62.5%;
+  background-color: whitesmoke;
+}
+
+aside[role=complementary] {
+  float: right;
+  width: 31.25%;
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=styles.css.map */

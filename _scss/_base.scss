@@ -1,0 +1,15 @@
+// _base.scss
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #eee;
+
+// colors
+$white: #FFF;
+$black: #000;
+$red: #ff0000;
+$green: #008000;
+
+body {
+  padding: 20px;
+  font: 100% $font-stack;
+  background-color: $white;
+}
